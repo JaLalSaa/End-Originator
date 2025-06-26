@@ -120,7 +120,12 @@ p {
 
 p {
   color: #ccc;
-  font-size: 17px;
+}
+
+#services p,
+#portfolio p,
+#team p {
+  font-size: 16px;
 }
 
 /* ============== Services Section ============== */
