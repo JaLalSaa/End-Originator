@@ -79,7 +79,7 @@ _(You can come back to this section if you ever need these tools.)_
 ## 👤 Credits
 
 Designed by **Hassan Nisar**  
-Maintained by [Nerix](https://github.com/JaLalSaa)
+Maintained by [JaLalSaa](https://github.com/JaLalSaa)
 
 ---
 
