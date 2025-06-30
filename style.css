@@ -9,13 +9,14 @@ body {
   margin: 0;
   background-color: #1a1a2e;
   color: #f5f5f5;
+  font-size: 16px;
 }
 
 #home,
 #services,
 #portfolio,
 #team {
-  scroll-margin-top: 115px;
+  scroll-margin-top: 7.1875rem;
 }
 
 /* ============== Header ============== */
@@ -24,7 +25,7 @@ header {
   align-items: center;
   justify-content: space-around;
   background-color: #0f3460;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0.25rem 0.3125rem rgba(0, 0, 0, 0.12);
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -37,15 +38,28 @@ header h1 {
 header nav a {
   color: #eaeaea;
   text-decoration: none;
-  margin: 0 5px;
+  margin: 0 0.3125rem;
   transition: 0.3s;
 }
 
 header nav a:hover {
   background-color: #e94560;
   color: #fff;
-  padding: 2px 8px;
-  border-radius: 4px;
+  padding: 0.125rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+  }
+
+  header nav {
+    background-color: #16213e;
+    width: 100%;
+    text-align: center;
+    padding: 0.625rem 0;
+  }
 }
 
 /* ============== Home Section ============== */
@@ -76,26 +90,26 @@ header nav a:hover {
   transform: translate(-50%, -50%);
   text-align: center;
   color: #fff;
-  font-size: 4vw;
+  font-size: 3rem;
   z-index: 2;
 }
 
 #home p span {
-  font-size: 6vw;
+  font-size: 5rem;
   color: #e94560;
 }
 
 #home .btn {
   position: absolute;
-  top: 58%;
+  top: 52%;
   left: 50%;
   transform: translate(-50%, -50%);
-  padding: 8px 16px;
-  font-size: 14px;
+  padding: 0.5rem 1.5rem;
+  font-size: 1rem;
   color: white;
   background-color: #e94560;
-  border: 1px solid #ffffff;
-  border-radius: 4px;
+  border: 0.0625rem solid #ffffff;
+  border-radius: 0.25rem;
   cursor: pointer;
   font-family: inherit;
   z-index: 2;
@@ -104,6 +118,28 @@ header nav a:hover {
 
 #home .btn:hover {
   background-color: #f06070;
+}
+
+@media (max-width: 768px) {
+  #home p {
+    top: 40%;
+    font-size: 1rem;
+  }
+
+  #home p span {
+    font-size: 1.4rem;
+  }
+
+  #home img {
+    object-fit: cover;
+    height: 70vh;
+  }
+
+  #home .btn {
+    padding: 0.4rem 0.9rem;
+    font-size: 0.7rem;
+    top: 50%;
+  }
 }
 
 /* ============== Shared Styles ============== */
@@ -115,7 +151,7 @@ footer p {
 
 h3,
 p {
-  margin: 5px 0;
+  margin: 0.3125rem 0;
 }
 
 p {
@@ -126,14 +162,14 @@ p {
 #services {
   background-color: #1a1a2e;
   color: #eaeaea;
-  padding-bottom: 30px;
+  padding-bottom: 1rem;
 }
 
 #services h2,
 #portfolio h2,
 #team h2 {
   margin: 0;
-  padding: 15px 0 2px;
+  padding: 1rem 0 0.125rem;
   color: #e94560;
 }
 
@@ -147,116 +183,124 @@ p {
 .team-container {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 4rem;
   flex-wrap: wrap;
-  padding: 20px;
+  padding: 1.2rem;
 }
 
 .service-card,
 .portfolio-cards {
   background-color: #0f3460;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
 .service-card {
-  padding: 15px;
-  width: 300px;
-  border-radius: 12px;
+  padding: 1rem;
+  width: 18.75rem;
+  border-radius: 0.625rem;
 }
 
 .service-card .icon i {
-  font-size: 35px;
+  font-size: 2rem;
   color: #0f3460;
   background-color: #e94560;
-  padding: 15px;
-  margin: 10px 0;
-  border-radius: 20%;
+  padding: 1rem;
+  margin: 0.4375rem 0;
+  border-radius: 15%;
+}
+
+@media (max-width: 768px) {
+  .services-container,
+  .portfolio-container,
+  .team-container {
+    gap: 1.5rem;
+  }
 }
 
 /* ============== Portfolio Section ============== */
 #portfolio {
   background-color: #1D1D35;
   color: #eaeaea;
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
 }
 
 .portfolio-cards {
-  padding: 0 0 3px;
-  width: 300px;
+  padding: 0 0 0.1875rem; 
+  width: 18.75rem;
 }
 
 .portfolio-cards img {
   width: 100%;
-  border-bottom: 1px solid #fff;
+  border-bottom: 0.0625rem solid #fff;
 }
 
 /* ============== Team Section ============== */
 #team {
   background-color: #22223E;
   color: #eaeaea;
-  padding-bottom: 30px;
+  padding-bottom: 1.875rem;
 }
 
 .team-container {
-  gap: 25px;
+  gap: 1.5625rem; 
 }
 
 .members {
-  padding: 0 0 3px;
-  width: 200px;
+  padding: 0 0 0.1875rem;
+  width: 12.5rem; 
   text-align: center;
 }
 
 .members img {
   width: 80%;
   border-radius: 50%;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.3);
 }
 
 /* ============== Contact Section ============== */
 #contact {
   background-color: #292a4f;
   color: #eaeaea;
-  padding: 40px 20px 60px;
+  padding: 2.5rem 1.25rem 3.75rem;
   text-align: center;
 }
 
 #contact h2 {
   color: #e94560;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 #contact p {
-  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
   color: #ccc;
 }
 
 .contact-container {
   display: flex;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem; 
   flex-wrap: wrap;
 }
 
 .contact-form {
   background-color: #0f3460;
-  padding: 25px;
-  border-radius: 15px;
-  width: 350px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  padding: 1.5625rem; 
+  border-radius: 0.9375rem; 
+  width: 21.875rem; 
+  box-shadow: 0 0.25rem 0.625rem rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 0.9375rem;
 }
 
 .contact-form input,
 .contact-form textarea {
-  padding: 10px 15px;
-  border-radius: 8px;
+  padding: 0.625rem 0.9375rem; 
+  border-radius: 0.5rem;
   border: none;
   font-family: inherit;
-  font-size: 16px;
+  font-size: 1rem;
   background-color: #16213e;
   color: #f5f5f5;
   resize: vertical;
@@ -265,7 +309,7 @@ p {
 
 .contact-form input:focus,
 .contact-form textarea:focus {
-  outline: 2px solid #e94560;
+  outline: 0.125rem solid #e94560;
   background-color: #1f2a56;
 }
 
@@ -275,9 +319,9 @@ p {
   color: white;
   font-weight: 600;
   cursor: pointer;
-  padding: 12px;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: 0.3s ease;
 }
 
 .contact-form button.btn:hover {
@@ -285,32 +329,32 @@ p {
 }
 
 .contact-info {
-  max-width: 300px;
+  max-width: 18.75rem;
   text-align: left;
   color: #ccc;
 }
 
 .contact-info h3 {
   color: #e94560;
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .contact-info p {
-  margin: 10px 0;
-  font-size: 16px;
+  margin: 0.625rem 0;
+  font-size: 1rem;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
 }
 
 .social-icons {
-  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 
 .social-icons a {
   color: #e94560;
-  font-size: 24px;
-  margin-right: 15px;
+  font-size: 1.5rem;
+  margin-right: 0.9375rem;
   transition: color 0.3s ease;
 }
 
@@ -318,20 +362,6 @@ p {
   color: #f06070;
 }
 
-/* ============== Footer ============== */
-footer {
-  background-color: #0f3460;
-  color: #eaeaea;
-  padding: 3px 0;
-  font-size: 14px;
-  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.2);
-}
-
-footer p {
-  padding: 0;
-}
-
-/* Responsive for Contact Section */
 @media (max-width: 768px) {
   .contact-container {
     flex-direction: column;
@@ -341,7 +371,7 @@ footer p {
   .contact-form,
   .contact-info {
     width: 100%;
-    max-width: 400px;
+    max-width: 25rem;
     text-align: center;
   }
 
@@ -350,31 +380,15 @@ footer p {
   }
 }
 
-/* ============== Media Queries ============== */
-@media (max-width: 768px) {
-  header {
-    flex-direction: column;
-  }
+/* ============== Footer ============== */
+footer {
+  background-color: #0f3460;
+  color: #eaeaea;
+  padding: 0.1875rem 0;
+  font-size: 0.875rem;
+  box-shadow: 0 -0.125rem 0.5rem rgba(0, 0, 0, 0.2);
+}
 
-  header nav {
-    background-color: #16213e;
-    width: 100%;
-    text-align: center;
-    padding: 10px 0;
-  }
-
-  #home p {
-    top: 30%;
-    font-size: 20px;
-  }
-
-  #home p span {
-    font-size: 28px;
-  }
-
-  #home .btn {
-    padding: 2px 6px;
-    font-size: 12px;
-    top: 56%;
-  }
+footer p {
+  padding: 0;
 }
